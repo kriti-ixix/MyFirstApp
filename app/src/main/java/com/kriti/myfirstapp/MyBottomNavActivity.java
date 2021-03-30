@@ -12,6 +12,6 @@ public class MyBottomNavActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_bottom_nav);
 
-        Toast.makeText(this,"Hello", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Hello World", Toast.LENGTH_SHORT).show();
     }
 }
