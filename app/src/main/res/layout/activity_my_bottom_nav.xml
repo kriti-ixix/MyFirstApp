@@ -16,7 +16,6 @@
         android:layout_height="60dp"
         android:id="@+id/bottomAppBar"
         app:contentInsetStart="0dp"
-        android:background="@android:color/transparent"
         android:layout_gravity="bottom">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
