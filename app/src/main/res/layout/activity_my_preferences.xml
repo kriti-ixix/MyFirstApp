@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyPreferences">
+
+    <EditText
+        android:id="@+id/editTextPref"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:inputType="textPassword"
+        android:padding="13dp"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="5dp"
+        android:background="@drawable/edittextbg"
+        android:hint="Enter your preference here"
+        android:textAlignment="center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSavePref"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editTextPref"
+        android:layout_marginTop="40dp"
+        android:text="Save Preference"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxJava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JAVA"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/buttonSavePref"
+        android:layout_marginLeft="100dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxAndroid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/buttonSavePref"
+        android:layout_alignLeft="@id/checkBoxJava"
+        android:layout_marginLeft="100dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonGroup1"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/checkBoxJava"
+        android:layout_marginTop="100dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Morning Batch"
+            android:id="@+id/radioMorning"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Afternoon Batch"
+            android:id="@+id/radioAfternoon"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evening Batch"
+            android:id="@+id/radioEvening"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:drawableStart="@drawable/ic_camera"
+        android:drawablePadding="5dp"
+        android:layout_below="@id/checkBoxJava"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/mybg"
+        android:padding="10dp"
+        android:inputType="textPersonName" />
+
+</RelativeLayout>
