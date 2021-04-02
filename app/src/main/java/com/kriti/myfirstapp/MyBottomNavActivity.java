@@ -19,7 +19,6 @@ public class MyBottomNavActivity extends AppCompatActivity {
     CategoriesFragment categoriesFragment = new CategoriesFragment();
     FragmentManager fragmentManager = getSupportFragmentManager();
     BottomNavigationView bottomNavigationView;
-    Fragment fSelected = homeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,18 +35,16 @@ public class MyBottomNavActivity extends AppCompatActivity {
                 switch(item.getItemId())
                 {
                     case R.id.miHome:
-                        fSelected = homeFragment;
+                        fragmentManager.beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
                         break;
                     case R.id.miCategories:
-                        fSelected = categoriesFragment;
+                        fragmentManager.beginTransaction().replace(R.id.frameLayout, categoriesFragment).commit();
                         break;
                     case R.id.miWorkouts:
                         break;
                     case R.id.miProfile:
                         break;
                 }
-
-                fragmentManager.beginTransaction().replace(R.id.frameLayout, fSelected).commit();
 
                 return true;
             }
