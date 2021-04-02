@@ -26,28 +26,30 @@ public class MyBottomNavActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_bottom_nav);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
         fragmentManager.beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
-
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId())
-                {
-                    case R.id.miHome:
-                        fragmentManager.beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
-                        break;
-                    case R.id.miCategories:
-                        fragmentManager.beginTransaction().replace(R.id.frameLayout, categoriesFragment).commit();
-                        break;
-                    case R.id.miWorkouts:
-                        break;
-                    case R.id.miProfile:
-                        break;
-                }
-
-                return true;
-            }
-        });
     }
+
+    BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item)
+        {
+            switch(item.getItemId())
+            {
+                case R.id.miHome:
+                    fragmentManager.beginTransaction().replace(R.id.frameLayout, homeFragment).commit();
+                    break;
+                case R.id.miCategories:
+                    fragmentManager.beginTransaction().replace(R.id.frameLayout, categoriesFragment).commit();
+                    break;
+                case R.id.miWorkouts:
+                    break;
+                case R.id.miProfile:
+                    break;
+            }
+
+            return true;
+        }
+    };
 }
