@@ -14,17 +14,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFirstApp">
-        <activity android:name=".MyBottomNavActivity">
+        <activity android:name=".MusicPlayer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Gallery"></activity>
-        <activity android:name=".MyListView">
+        <activity android:name=".MyBottomNavActivity">
+
         </activity>
-        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".Gallery"></activity>
+        <activity android:name=".MyListView"></activity>
+        <activity android:name=".SplashScreen" />
         <activity android:name=".DisplayPref" />
         <activity android:name=".MyPreferences" />
 
